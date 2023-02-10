@@ -1,38 +1,27 @@
 ```python
 from sklearn.linear_model import LinearRegression
-import plotly.express as px
-import plotly.graph_objs as go
-import pandas as pd
+import matplotlib.pyplot as plt
 import numpy as np
-```
 
-```python
-!wget https://raw.githubusercontent.com/ohmreborn/Basic-for-Datasci/main/pandas-02/data-firearm.csv
-```
+x = np.array([2,4,6,8,10,12,14]).reshape(-1, 1)
+y = np.array([6,10,11,22,25,30,55])
 
-```python
-df = pd.read_csv('data-firearm.csv')
-Alabama = df[df['state']=='Alabama']
-
+plt.scatter(x,y)
+plt.show()
 ```
 
 ```python
 model = LinearRegression()
-x,y = np.arange(len(Alabama['totals'])).reshape(-1,1),Alabama['totals']
-model.fit(x,y)
+model.fit(x, y)
 ```
 
 ```python
-fig = go.Figure(data=[go.Scatter(x=Alabama['month'],y=Alabama['totals'],mode='markers',name='data'),
-go.Scatter(x=Alabama['month'],y=model.predict(x).flatten(),mode='lines',name='data')])
-
-
+plt.scatter(x,y)
+plt.plot(x,model.predict(x),color='red')
+plt.show()
 ```
 
-```python
-fig.show()
-```
+# โจทย์โหลด data
+https://github.com/ohmreborn/Ai/blob/main/Day%201/data-firearm.csv
 
-```python
-
-```
+1. ให้หาLineargressionของ รัฐ 'Alabama'
