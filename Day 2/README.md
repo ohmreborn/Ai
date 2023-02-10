@@ -1,7 +1,4 @@
-<a
-href="https://colab.research.google.com/github/ohmreborn/Ai/blob/main/Day%202/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99_%E0%B9%80%E0%B8%89%E0%B8%A5%E0%B8%A2.ipynb"
-target="_parent"><img src="https://colab.research.google.com/assets/colab-
-badge.svg" alt="Open In Colab"/></a>
+
 
 ```python
 !wget https://raw.githubusercontent.com/ohmreborn/Ai/main/Day%202/Student_Marks.csv
